@@ -194,18 +194,29 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 6327894938525346037}
+          m_MethodName: DoBloodFx
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     OnDeath:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4396227740827574113}
-          m_MethodName: Die
-          m_Mode: 1
+        - m_Target: {fileID: 6327894938525346037}
+          m_MethodName: DoBloodFx
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -232,6 +243,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 4396227740827574113}
+          m_MethodName: Die
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     OnCriticalHit:
@@ -248,9 +270,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_MethodName: Play
-          m_Mode: 5
+        - m_Target: {fileID: 6327894938525346037}
+          m_MethodName: DoBloodFx
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -414,6 +436,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166c71b5b14e1964a82b9a1babbf6252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BloodSplatters:
+  - {fileID: 4328623109836399129, guid: a93c14406ec761c48a14d1c854ce89e0, type: 3}
+  - {fileID: 2579793402307113560, guid: cb966e189d3e425439cfb83ec7eec732, type: 3}
+  - {fileID: 8482440274234366816, guid: 0b8d6b182f5c0094cb5dfcebc3e2715d, type: 3}
 --- !u!1001 &39501413022684320
 PrefabInstance:
   m_ObjectHideFlags: 0

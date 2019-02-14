@@ -20,7 +20,6 @@ GameObject:
   - component: {fileID: 6798611544518348494}
   - component: {fileID: 192936917267964972}
   - component: {fileID: 192936917267964981}
-  - component: {fileID: 6944065737633827867}
   - component: {fileID: 9114288007197113287}
   m_Layer: 9
   m_Name: Player
@@ -224,7 +223,18 @@ MonoBehaviour:
   ContMotionVector: {x: 0, y: 0}
   OnLanding:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6798611544518348494}
+        m_MethodName: LandingSnow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   gravityEnabled: 1
@@ -242,6 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad21347323f69a4e9e51fb2264547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FootstepParticle: {fileID: 3011038024110594430, guid: ccadeea9458330243ac45dac3e7b0915,
+    type: 3}
   CurrentAnimationState: 0
 --- !u!114 &192936917267964972
 MonoBehaviour:
@@ -361,19 +373,6 @@ MonoBehaviour:
     Armored: {r: 1, g: 1, b: 0, a: 0.25}
   DrawGizmo: 1
   CurrentState: 1
---- !u!114 &6944065737633827867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192936917267964982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ad21347323f69a4e9e51fb2264547a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentAnimationState: 0
 --- !u!114 &9114288007197113287
 MonoBehaviour:
   m_ObjectHideFlags: 0

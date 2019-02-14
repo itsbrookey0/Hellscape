@@ -99,8 +99,14 @@ public class MeatblobController : EnemyController
         }
 
         if (currentRoutine != null) StopCoroutine(currentRoutine);
+        
+        Debug.Log(name + "Is Dead.");
+        SetState(State.Dead);
+        am?.StopAttack();
 
-        base.Die();
+        // Despawn
+        if (transform.parent != null) Destroy(transform.parent.gameObject, 1.5f);
+        else Destroy(gameObject, 1.5f);
     }
     #endregion
     #region Protected Methods

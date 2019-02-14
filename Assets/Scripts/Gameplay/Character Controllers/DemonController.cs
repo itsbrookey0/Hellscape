@@ -27,6 +27,8 @@ public class DemonController : EnemyController
     public float ThrowRange = 10;
     public float MeleeRange = 4;
 
+    public float MinDistToGround = 10f;
+
     [Serializable]
     public class DemonGizmoColours
     {
@@ -44,7 +46,6 @@ public class DemonController : EnemyController
     protected const float fastSpeed = 5f;
     protected const float slowSpeed = 2f;
     protected const float riseSpeed = 10f;
-    protected const float minDistToGround = 10f;
 
     protected Hurtbox hurtbox;
     #endregion
@@ -104,11 +105,11 @@ public class DemonController : EnemyController
         }
         
         // If close to ground
-        Debug.DrawLine(transform.position, transform.position + (Vector3.down * minDistToGround), Color.green, Time.fixedDeltaTime); 
+        Debug.DrawLine(transform.position, transform.position + (Vector3.down * MinDistToGround), Color.green, Time.fixedDeltaTime); 
         if (Physics2D.Raycast(
             transform.position,
             Vector2.down,
-            minDistToGround,
+            MinDistToGround,
             LayerMask.GetMask("Environment", "Platform")))
         {
             mc.MoveVector = Vector2.up;

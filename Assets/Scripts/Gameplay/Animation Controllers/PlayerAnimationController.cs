@@ -5,6 +5,7 @@ using Spine.Unity;
 
 public class PlayerAnimationController : AnimationController
 {
+    public GameObject FootstepParticle;
     public bool CloseToGround
     {
         get
@@ -55,6 +56,10 @@ public class PlayerAnimationController : AnimationController
         plr = GetComponent<PlayerController>();
         am = GetComponent<PlayerAttackManager>();
         mc = GetComponent<PlayerMotionController>();
+    }
+    private void Start()
+    {
+        sk_an.state.Event += CreateFootstepParticle;
     }
 
     public void RunAnimationStateMachine()
@@ -206,6 +211,13 @@ public class PlayerAnimationController : AnimationController
         SetAnimationState(AnimState.Attacking);
     }
 
+    public void LandingSnow()
+    {
+        var particle = Instantiate(FootstepParticle, transform.position + Vector3.down, FootstepParticle.transform.rotation);
+        particle.transform.localScale = Vector3.one;
+        Destroy(particle, 3f);
+    }
+
     private void SwitchOnLSword(PlayerAttackManager.AttackState newAttackState)
     {
         switch (newAttackState)
@@ -277,5 +289,12 @@ public class PlayerAnimationController : AnimationController
     private void SetAnimationState(AnimState newAnimationState)
     {
         CurrentAnimationState = newAnimationState;
+    }
+
+    private void CreateFootstepParticle(TrackEntry trackEntry, Spine.Event e)
+    {
+        var particle = Instantiate(FootstepParticle, transform.position + Vector3.down, FootstepParticle.transform.rotation);
+        particle.transform.localScale = Vector3.one * 0.3f;
+        Destroy(particle, 3f);
     }
 }
