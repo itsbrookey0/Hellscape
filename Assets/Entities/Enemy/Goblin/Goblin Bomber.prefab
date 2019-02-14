@@ -122,6 +122,9 @@ MonoBehaviour:
   AttackData: {fileID: 11400000, guid: b80e94fef87c770448107e4da88abe9c, type: 2}
   BombPrefab: {fileID: 8747437113877806055, guid: a35679aeea45f9649a6b73599ac90c1f,
     type: 3}
+  goblinHide: {fileID: 2065434899476922424, guid: fd854414fa33a9240a9e2e8ecf274680,
+    type: 3}
+  AverageItemVariance: {x: 3, y: 3}
 --- !u!114 &3875051180695759836
 MonoBehaviour:
   m_ObjectHideFlags: 0
