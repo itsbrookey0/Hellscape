@@ -135,7 +135,6 @@ public class MeatblobController : EnemyController
             case Behaviour.Idle:
                 if (DistToPlayer < DetectionRange)
                 {
-                    Debug.Log("chase");
                     StartChase();
                 }
                 else
@@ -151,7 +150,6 @@ public class MeatblobController : EnemyController
 
                 if (DistToPlayer > DetectionRange)
                 {
-                    Debug.Log("wait");
                     StopChase();
                 }
                 break;
