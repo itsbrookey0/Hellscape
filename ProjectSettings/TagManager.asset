@@ -34,7 +34,7 @@ TagManager:
   - Interactable
   - Ladder
   - IgnorePlatform
-  - 
+  - IgnoreEnvironment
   - 
   - 
   - 
