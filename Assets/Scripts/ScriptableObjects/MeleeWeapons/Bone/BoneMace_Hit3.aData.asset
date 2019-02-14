@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb82047a286ce7148b5718176ec43ce7, type: 3}
-  m_Name: DemonMace_Hit3.aData
+  m_Name: BoneMace_Hit3.aData
   m_EditorClassIdentifier: 
   Startup: 39
   Active: 4
   Recovery: 60
   MotionOnAttack: 5
-  Damage: 2
+  Damage: 3
   Strength: 0
-  KnockBack: 10
-  KnockUp: 3
-  HitStun: 32
-  HitStop: 4
+  KnockBack: 4
+  KnockUp: 8
+  HitStun: 60
+  HitStop: 12
   Sign: 1

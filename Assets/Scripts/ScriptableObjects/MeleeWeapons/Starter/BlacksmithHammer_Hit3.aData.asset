@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Startup: 12
   Active: 4
-  Recovery: 30
+  Recovery: 60
   MotionOnAttack: 5
   Damage: 1
   Strength: 0

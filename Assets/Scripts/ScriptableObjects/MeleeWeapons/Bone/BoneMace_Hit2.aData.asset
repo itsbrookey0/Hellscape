@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb82047a286ce7148b5718176ec43ce7, type: 3}
-  m_Name: BoneWarAxe_Hit1.aData 1
+  m_Name: BoneMace_Hit2.aData
   m_EditorClassIdentifier: 
-  Startup: 40
-  Active: 8
-  Recovery: 36
-  MotionOnAttack: 10
-  Damage: 4
-  Strength: 2
-  KnockBack: 30
-  KnockUp: 12
-  HitStun: 70
-  HitStop: 14
+  Startup: 19
+  Active: 3
+  Recovery: 16
+  MotionOnAttack: 5
+  Damage: 3
+  Strength: 0
+  KnockBack: 2
+  KnockUp: 0
+  HitStun: 55
+  HitStop: 7
   Sign: 1

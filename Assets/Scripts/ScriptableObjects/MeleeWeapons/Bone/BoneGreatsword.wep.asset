@@ -21,5 +21,8 @@ MonoBehaviour:
   equipmentType: 1
   WeaponSkinName: default
   NormalAttackChainLength: 0
-  NormalAtkData: []
+  NormalAtkData:
+  - {fileID: 11400000, guid: dd0a4f0ea0bdb9a4498d5ca7312b2534, type: 2}
+  - {fileID: 11400000, guid: 3cd802114f2accc4ca6314ff0590dcff, type: 2}
+  - {fileID: 11400000, guid: 666583cd0c6f4be4ba9ea6e5a8a044b8, type: 2}
   Type: 1

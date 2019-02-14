@@ -28,13 +28,14 @@ public class PlayerAnimationController : AnimationController
     private Color defaultColour;
     private PlayerAttackManager.AttackState previousAttackState = PlayerAttackManager.AttackState.None;
 
-    private AnimState currentAnimationState = AnimState.Idle;
-    private enum AnimState
+    public AnimState CurrentAnimationState = AnimState.Idle;
+    public enum AnimState
     {
         Idle,
         IdleLong,
 
         Run,
+        RunHeavy,
         Jump,
         Fall,
         Land,
@@ -58,7 +59,7 @@ public class PlayerAnimationController : AnimationController
 
     public void RunAnimationStateMachine()
     {
-        switch (currentAnimationState)
+        switch (CurrentAnimationState)
         {
             case AnimState.Idle:
                 if (plr.CurrentState == BaseController.State.Ready)
@@ -74,6 +75,19 @@ public class PlayerAnimationController : AnimationController
                 break;
 
             case AnimState.Run:
+                if (plr.CurrentState == BaseController.State.Ready)
+                {
+                    if (mc.MoveVector.x == 0) ChangeToIdleState();
+                    if (!mc.IsGrounded && !CloseToGround) ChangeToFallState();
+                }
+                else if (plr.CurrentState == BaseController.State.Action)
+                {
+                    if (plr.CurrentAction == PlayerController.Action.Rolling) ChangeToRollState();
+                    else if (plr.CurrentAction == PlayerController.Action.Attacking) ChangeToAttackState();
+                }
+                break;
+
+            case AnimState.RunHeavy:
                 if (plr.CurrentState == BaseController.State.Ready)
                 {
                     if (mc.MoveVector.x == 0) ChangeToIdleState();
@@ -159,7 +173,22 @@ public class PlayerAnimationController : AnimationController
     public void ChangeToRunState()
     {
         SetAnimationState(AnimState.Run);
-        sk_an.AnimationState.SetAnimation(0, "OnehandRun", true);
+
+        switch (am.MeleeWeapon.Type)
+        {
+            case MeleeWeaponItem.WeaponType.LightSword:
+                sk_an.AnimationState.SetAnimation(0, "OnehandRun", true);
+                break;
+            case MeleeWeaponItem.WeaponType.GreatSword:
+                sk_an.AnimationState.SetAnimation(0, "TwohandRun", true);
+                break;
+            case MeleeWeaponItem.WeaponType.Mace:
+                sk_an.AnimationState.SetAnimation(0, "OnehandRun", true);
+                break;
+            case MeleeWeaponItem.WeaponType.Warhammer:
+                sk_an.AnimationState.SetAnimation(0, "TwohandRun", true);
+                break;
+        }
     }
     public void ChangeToFallState()
     {
@@ -246,6 +275,6 @@ public class PlayerAnimationController : AnimationController
     }
     private void SetAnimationState(AnimState newAnimationState)
     {
-        currentAnimationState = newAnimationState;
+        CurrentAnimationState = newAnimationState;
     }
 }
