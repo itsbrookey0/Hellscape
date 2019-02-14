@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Sierra;
 
 public class GoblinBomberController : EnemyController
 {
@@ -21,6 +22,9 @@ public class GoblinBomberController : EnemyController
 
     public AttackData AttackData;
     public GameObject BombPrefab;
+
+    public GameObject goblinHide;
+    public Vector2 AverageItemVariance = new Vector2(3, 3);
     #endregion
     #region Private Vars
     private IEnumerator currentRoutine;
@@ -46,6 +50,20 @@ public class GoblinBomberController : EnemyController
     }
     public override void Die()
     {
+        int lootNum = UnityEngine.Random.Range(1, 3);
+        for (int i = 0; i < lootNum; i++)
+        {
+            var hideVarianceY = AverageItemVariance.y * Utility.GetRandomFloat();
+            var hideVarianceX = AverageItemVariance.x * Utility.GetRandomFloat();
+
+            var hideSpawnPos = new Vector3(
+                transform.position.x + hideVarianceX,
+                transform.position.y + hideVarianceY,
+                transform.position.z);
+
+            Instantiate(goblinHide, hideSpawnPos, transform.rotation);
+        }
+
         Debug.Log(name + "Is Dead.");
         SetState(State.Dead);
         if (currentRoutine != null) StopCoroutine(currentRoutine);
