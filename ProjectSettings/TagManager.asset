@@ -15,6 +15,7 @@ TagManager:
   - Key
   - Door
   - ForgeDoor
+  - StageInstances
   layers:
   - Default
   - TransparentFX

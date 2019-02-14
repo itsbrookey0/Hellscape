@@ -18,7 +18,7 @@ public class BossAttackTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        responder.StartAttack(AttackPath);
+        responder.StartAttack();
     }
 
     /// <summary>
@@ -37,7 +37,7 @@ public interface IBossAttackTriggerResponder
     /// Tell the boss to start an attack along this <see cref="BossAttackPath"/>
     /// </summary>
     /// <param name="attackPath"></param>
-    void StartAttack(BossAttackPath attackPath);
+    void StartAttack();
 }
 /// <summary>
 /// Linear path for boss' attack to follow. Comprised of a direction and distance.

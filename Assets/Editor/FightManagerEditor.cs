@@ -9,7 +9,7 @@ public class FightManagerEditor : Editor
     Transform InstanceContainer;
     private int StageInEditor;
     private List<List<GameObject>> StageObjectsInEditor = new List<List<GameObject>>();
-
+    /*
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -75,5 +75,5 @@ public class FightManagerEditor : Editor
                 }
             }
         }
-    }
+    }*/
 }
