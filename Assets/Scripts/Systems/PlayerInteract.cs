@@ -29,7 +29,7 @@ public class PlayerInteract : MonoBehaviour
     private bool forgeUnfreeze;
 
     [Header("Item Pickup")]
-    public float itemSpeed = 6f;
+    public float itemSpeed = 10f;
     public Transform target;
     public bool pickedUp;
 
