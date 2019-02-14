@@ -14,8 +14,7 @@ public class CleanStageInstances : MonoBehaviour
             if (child.GetComponent<EnemyController>() ||
                 child.GetComponent<BouncePad>())
             {
-                if (Application.isEditor) DestroyImmediate(child.gameObject);
-                else Destroy(child.gameObject);
+                Destroy(child.gameObject);
 
                 go = null;
             }
@@ -27,10 +26,14 @@ public class CleanStageInstances : MonoBehaviour
         {
             var go = child.gameObject;
 
-            if (Application.isEditor) DestroyImmediate(child.gameObject);
-             else Destroy(child.gameObject);
+            Destroy(child.gameObject);
 
             go = null;
+        }
+        var bouncepads = FindObjectsOfType<BouncePad>();
+        foreach (BouncePad bouncepad in bouncepads)
+        {
+            Destroy(bouncepad.gameObject);
         }
     }
 }
