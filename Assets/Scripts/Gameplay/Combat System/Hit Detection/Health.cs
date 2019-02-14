@@ -227,7 +227,6 @@ public class Health : MonoBehaviour
         // Exit early if in superstun to prevent normal hitstun from overriding.
         if (chr?.CurrentState == BaseController.State.SuperStun) return;
 
-        Debug.Log("HS");
         if (currentHsRoutine != null) StopCoroutine(currentHsRoutine);
         currentHsRoutine = HitStunRoutine();
         StartCoroutine(currentHsRoutine);

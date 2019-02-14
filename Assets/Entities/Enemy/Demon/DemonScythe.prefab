@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4800226472953693361}
   - component: {fileID: 4800226472953693358}
   - component: {fileID: 4800226472953693360}
-  m_Layer: 10
+  m_Layer: 16
   m_Name: DemonScythe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XSpeed: 50
   YSpeed: -20
+  moveVector: {x: 0, y: 0}
 --- !u!114 &4800226472953693355
 MonoBehaviour:
   m_ObjectHideFlags: 0

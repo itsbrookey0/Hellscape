@@ -95,6 +95,7 @@ public class PlayerAnimationController : AnimationController
                 else if (plr.CurrentState == BaseController.State.Action)
                 {
                     if (plr.CurrentAction == PlayerController.Action.Rolling) ChangeToRollState();
+                    if (plr.CurrentAction == PlayerController.Action.Attacking) ChangeToAttackState();
                 }
                 break;
 
@@ -115,6 +116,10 @@ public class PlayerAnimationController : AnimationController
                     if (newAttackState == PlayerAttackManager.AttackState.Ranged)
                     {
                         sk_an.AnimationState.SetAnimation(0, "BowFirstShot", false);
+                    }
+                    else if (newAttackState == PlayerAttackManager.AttackState.Aerial)
+                    {
+                        Debug.LogWarning("No animation implimented");                        
                     }
                     else
                     {

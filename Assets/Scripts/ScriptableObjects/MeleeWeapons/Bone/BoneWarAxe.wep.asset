@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 911b52c54ce470740ae628eac3bf9c46, type: 3}
-  m_Name: BoneAxe.wep
+  m_Name: BoneWarAxe.wep
   m_EditorClassIdentifier: 
   id: b41f310dfb9ba7e4baa890a98c531baf
   Name: Bone Axe
@@ -22,7 +22,6 @@ MonoBehaviour:
   WeaponSkinName: Bone_Axe
   NormalAttackChainLength: 0
   NormalAtkData:
-  - {fileID: 11400000, guid: 714aeae6924fe76438e4e151407a3fd3, type: 2}
-  - {fileID: 11400000, guid: b71631553ad14d847a02455059be55be, type: 2}
-  - {fileID: 11400000, guid: f12379cceaf28304a9e8b893d2e297c2, type: 2}
+  - {fileID: 11400000, guid: 7ae62204754e5f645bf58d0e6adffc1a, type: 2}
+  - {fileID: 11400000, guid: 7ae62204754e5f645bf58d0e6adffc1a, type: 2}
   Type: 3

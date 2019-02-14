@@ -36,6 +36,7 @@ public class ProjectileController : MonoBehaviour, IHitboxResponder
     protected void OnEnable()
     {
         hb.SetActive();
+        Destroy(gameObject, 5f);
     }
     protected void FixedUpdate()
     {
@@ -46,6 +47,8 @@ public class ProjectileController : MonoBehaviour, IHitboxResponder
     }
     protected void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Platform") return;
+
         Events.OnEnvironmentImpact.Invoke();
         Destroy(gameObject);
     }
@@ -90,8 +93,8 @@ public class ProjectileController : MonoBehaviour, IHitboxResponder
                 }
                 Events.OnHit.Invoke();
             }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
     /// <summary>

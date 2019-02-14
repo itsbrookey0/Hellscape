@@ -268,7 +268,13 @@ public class DemonController : EnemyController
             Instantiate(demonChunk, eyeSpawnPos, transform.rotation);
         }
 
-        base.Die();
+        Debug.Log(name + "Is Dead.");
+        SetState(State.Dead);
+        am?.StopAttack();
+
+        // Despawn
+        if (transform.parent != null) Destroy(transform.parent.gameObject);
+        else Destroy(gameObject);
     }
     #endregion
 }

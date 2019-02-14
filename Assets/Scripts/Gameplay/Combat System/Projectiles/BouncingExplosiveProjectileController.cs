@@ -53,7 +53,8 @@ public class BouncingExplosiveProjectileController : MonoBehaviour, IHitboxRespo
         mc.MoveVector = Vector2.right;
         mc.UpdatePosition();
 
-        if (mc.XSpeed > 0.05) mc.XSpeed -= LinearDecay;
+        if (mc.XSpeed > 0.05f) mc.XSpeed -= LinearDecay;
+        else if (mc.XSpeed < -0.05f) mc.XSpeed += LinearDecay;
         else mc.XSpeed = 0;
 
         // Hitbox
@@ -113,11 +114,11 @@ public class BouncingExplosiveProjectileController : MonoBehaviour, IHitboxRespo
             Hurtbox hurtbox = overlap.GetComponent<Hurtbox>();
             if (overlap.transform.position.x <= transform.position.x)
             {
-                if (hurtbox != null) left.Add(hurtbox);
+                if (hurtbox != null && hurtbox.CurrentState != Hurtbox.State.Blocking) left.Add(hurtbox);
             }
             else
             {
-                if (hurtbox != null) right.Add(hurtbox);
+                if (hurtbox != null && hurtbox.CurrentState != Hurtbox.State.Blocking) right.Add(hurtbox);
             }
         }
 

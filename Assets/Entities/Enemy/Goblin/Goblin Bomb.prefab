@@ -163,10 +163,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XSpeed: 0
   YSpeed: 0
+  moveVector: {x: 0, y: 0}
   Gravity: 0.6
   GravityMax: 20
   DragX: 0.5
+  GravityEnabledByDefault: 1
   ContMotionVector: {x: 0, y: 0}
+  OnLanding:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  gravityEnabled: 1
 --- !u!114 &8747437113877806075
 MonoBehaviour:
   m_ObjectHideFlags: 0

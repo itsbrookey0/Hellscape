@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb82047a286ce7148b5718176ec43ce7, type: 3}
   m_Name: GoblinBomb.aData
   m_EditorClassIdentifier: 
-  Startup: 40
+  Startup: 53
   Active: 1
-  Recovery: 40
+  Recovery: 55
   MotionOnAttack: 0
   Damage: 1
+  Strength: 0
   KnockBack: 20
   KnockUp: 20
   HitStun: 20
