@@ -224,8 +224,8 @@ MonoBehaviour:
   TurnDuration: 120
   BouncePadPrefab: {fileID: 2294588854056839805, guid: 7bb0f1b5385a3c241b97740f54c89b7f,
     type: 3}
-  bone: {fileID: 0}
-  eyeball: {fileID: 0}
+  bone: {fileID: 5776911592199247892, guid: 722a5bb6955634d4c9274ad200deaec7, type: 3}
+  eyeball: {fileID: 532371373381874444, guid: 48a06ae9cb7159245b61d50683c04b15, type: 3}
   AverageItemVariance: {x: 3, y: 3}
   CurrentBehaviour: 0
 --- !u!114 &2898335708096625760
