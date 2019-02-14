@@ -11,4 +11,12 @@ public class SlimePriestAnimationController : EnemyAnimationController
         sk_an.AnimationState.SetAnimation(0, "Hit", false);
         sk_an.AnimationState.AddAnimation(0, "Idle", true, 0);
     }
+    public virtual void EffectOnShout()
+    {
+        if (renderer == null) return;
+        if (sk_an == null) return;
+
+        sk_an.AnimationState.SetAnimation(0, "Shout", false);
+        sk_an.AnimationState.AddAnimation(0, "Idle", true, 0);
+    }
 }

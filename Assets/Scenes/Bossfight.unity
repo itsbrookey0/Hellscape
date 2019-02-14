@@ -624,8 +624,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24af9e2ec5e6d21439114c8e2c580f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ColorFlashFrames: 12
-  ColourOnHit: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &323445143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,8 +1725,42 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+  PriestEvents:
+    OnStageSwitchAlpha:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 322385438}
+          m_MethodName: EffectOnShout
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    OnStageSwitchBeta:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 806127655}
+          m_MethodName: GoToNextStage
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
   CurrentBehaviour: 0
   AttackTrigger: {fileID: 777684681}
+  ChangeStageDelayFrames: 120
 --- !u!114 &1053853739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,6 +1829,17 @@ MonoBehaviour:
     OnDamage:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1053853739}
+          m_MethodName: StopAttack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 322385438}
           m_MethodName: EffectOnHit
           m_Mode: 1
@@ -1813,8 +1856,8 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 322385438}
-          m_MethodName: EffectOnDeath
+        - m_Target: {fileID: 1053853738}
+          m_MethodName: Die
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1824,8 +1867,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1053853738}
-          m_MethodName: Die
+        - m_Target: {fileID: 1053853739}
+          m_MethodName: StopAttack
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 322385438}
+          m_MethodName: EffectOnHit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2055,8 +2109,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1817955390}
-        m_MethodName: ClearAll
+      - m_Target: {fileID: 1053853738}
+        m_MethodName: ChangeStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2066,9 +2120,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 806127655}
-        m_MethodName: GoToNextStage
-        m_Mode: 6
+      - m_Target: {fileID: 1817955390}
+        m_MethodName: ClearAll
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

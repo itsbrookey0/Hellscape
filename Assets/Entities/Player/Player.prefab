@@ -194,7 +194,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd9f7287e38759049b568d38966ad240, type: 2}
   - {fileID: 11400000, guid: 383972eda32c07b43b933d1fc9582813, type: 2}
   - {fileID: 11400000, guid: 990cfab95ac5f1845b071e756072c890, type: 2}
+  - {fileID: 11400000, guid: baf0ba0bdc5216f4892315ede68880cf, type: 2}
   AtkStage: 0
+  projectilePrefab: {fileID: 0}
   MeleeWeapon: {fileID: 11400000, guid: 535bf0fdb8219a64eb135ee01d0cf8c1, type: 2}
   RangedWeapon: {fileID: 11400000, guid: 00cec8ad545caf44b97fcb42cbdcc884, type: 2}
   ArrowCapacity: 3
@@ -214,10 +216,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XSpeed: 10
   YSpeed: 0
+  moveVector: {x: 0, y: 0}
   Gravity: 1
   GravityMax: 70
   DragX: 0.5
+  GravityEnabledByDefault: 1
   ContMotionVector: {x: 0, y: 0}
+  OnLanding:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  gravityEnabled: 1
   FallMultiplier: 1.5
   LowJumpMultiplier: 2.5
 --- !u!114 &6798611544518348494
@@ -232,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad21347323f69a4e9e51fb2264547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentAnimationState: 0
 --- !u!114 &192936917267964972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad21347323f69a4e9e51fb2264547a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentAnimationState: 0
 --- !u!114 &9114288007197113287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +399,11 @@ MonoBehaviour:
   itemSpeed: 6
   target: {fileID: 192936917267964975}
   pickedUp: 0
+  hasKey: 0
+  doorOpen: 0
+  forgeRoom: {fileID: 0}
+  mainRoom: {fileID: 0}
+  doorOpenSprite: {fileID: 0}
 --- !u!1 &2240721926063819659
 GameObject:
   m_ObjectHideFlags: 0

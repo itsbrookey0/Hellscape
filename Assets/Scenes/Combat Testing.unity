@@ -5125,23 +5125,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 192936917267964973, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: Attacks.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 192936917267964973, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: Attacks.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: baf0ba0bdc5216f4892315ede68880cf,
-        type: 2}
-    - target: {fileID: 192936917267964973, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: MeleeWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 535bf0fdb8219a64eb135ee01d0cf8c1,
-        type: 2}
     - target: {fileID: 9114288007197113287, guid: 299c53565037cd24dacc737c83af3fc5,
         type: 3}
       propertyPath: prompt
