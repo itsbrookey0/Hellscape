@@ -5348,6 +5348,31 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9114288007197113287, guid: 299c53565037cd24dacc737c83af3fc5,
         type: 3}
       propertyPath: prompt
@@ -5406,31 +5431,6 @@ PrefabInstance:
     - target: {fileID: 8993978443071335212, guid: 299c53565037cd24dacc737c83af3fc5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 192936917267964975, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3950877417624386931, guid: 299c53565037cd24dacc737c83af3fc5,
