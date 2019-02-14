@@ -108,7 +108,6 @@ public class CharacterMotionController : MotionController
         {
             inAirLastFrame = false;
             OnLanding.Invoke();
-            Debug.Log(name + " Landed");
         }
         else if (!IsGrounded)
         {

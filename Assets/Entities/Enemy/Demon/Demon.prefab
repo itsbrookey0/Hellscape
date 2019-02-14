@@ -121,8 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453682f2d1a068f4b9f3b3fccf4d5882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ColorFlashFrames: 12
-  ColourOnHit: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &5176832189858370831
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5176832190204321649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.9, y: 10.8, z: 0}
+  m_LocalPosition: {x: 10.9, y: 5.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5176832189655893772}
@@ -319,8 +317,9 @@ MonoBehaviour:
     ThrowRange: {r: 0, g: 1, b: 0, a: 1}
     ChaseRange: {r: 0, g: 1, b: 1, a: 1}
     MeleeRange: {r: 1, g: 0, b: 0, a: 1}
-  bone: {fileID: 0}
-  demonChunk: {fileID: 0}
+  bone: {fileID: 5776911592199247892, guid: 722a5bb6955634d4c9274ad200deaec7, type: 3}
+  demonChunk: {fileID: 2364642627961378953, guid: 27670b539f6af0a478f2a553380a5cd0,
+    type: 3}
   AverageItemVariance: {x: 3, y: 3}
 --- !u!114 &5176832190204321652
 MonoBehaviour:
@@ -403,13 +402,13 @@ MonoBehaviour:
     OnDamage:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: Play
-          m_Mode: 5
+        - m_Target: {fileID: 7932913471052797688}
+          m_MethodName: PlayEffect
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: test
             m_BoolArgument: 0
@@ -419,13 +418,13 @@ MonoBehaviour:
     OnDeath:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: Play
-          m_Mode: 5
+        - m_Target: {fileID: 7932913471052797688}
+          m_MethodName: PlayEffect
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: test
             m_BoolArgument: 0
@@ -473,13 +472,13 @@ MonoBehaviour:
     OnArmoredHit:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: Play
-          m_Mode: 5
+        - m_Target: {fileID: 7932913471052797688}
+          m_MethodName: PlayEffect
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: test
             m_BoolArgument: 0
@@ -599,3 +598,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5176832190393830165}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7932913471052797688 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3008566967389396461, guid: 9ac2e565f08ce7e4cb6f87b2e754115c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5176832190393830165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be42e7dd9be2394d935dafe905411e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

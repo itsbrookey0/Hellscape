@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System;
 using System.Collections;
 using Sierra.Combat2D;
@@ -131,6 +132,17 @@ public class PlayerController : BaseController
                 StartCoroutine(currentRollRoutine);
             }
         }
+        // Jumping attack
+        else if (
+            CurrentAction != Action.Attacking &&
+            InputManager.Attack() &&
+            CurrentAction == Action.None)
+        {
+            Debug.Log("Airattack");
+            SetState(State.Action);
+            SetAction(Action.Attacking);
+            am.AirAttack();
+        }
 
         // Ranged attack button
         if (InputManager.RangedAttack() && am.Arrows > 0)
@@ -138,7 +150,6 @@ public class PlayerController : BaseController
             SetState(State.Action);
             SetAction(Action.Attacking);
             am.RangedAttack();
-            Debug.Log("Called");
         }
 
         // Jump

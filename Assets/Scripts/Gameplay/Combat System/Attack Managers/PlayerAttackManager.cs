@@ -17,13 +17,12 @@ public class PlayerAttackManager : AttackManager, IHitboxResponder
     public AttackState AtkState = AttackState.None;
     public enum AttackState
     {
-        None, N1, N2, N3, N4, N5, Special, Ranged, RangedSpecial
+        None, N1, N2, N3, N4, N5, Ranged, Aerial
     }
 
     protected MeleeWeaponItem meleeItem;
     protected RangedWeaponItem rangedItem;
-
-
+    
     protected virtual void OnEnable()
     {
         if (MeleeWeapon == null) throw new NullReferenceException("Please assign an object to MeleeWeapon");
@@ -118,6 +117,17 @@ public class PlayerAttackManager : AttackManager, IHitboxResponder
         }
     }
     /// <summary>
+    /// Performs aerial melee attack actions.
+    /// </summary>
+    public void AirAttack()
+    {
+        if (AtkStage == AttackStage.Ready)
+        {
+            SetAtkState(AttackState.Aerial);
+            DoAttack(Attacks.Length - 1);
+        }
+    }
+    /// <summary>
     /// Re-populates <see cref="Attacks"/> array based on
     /// <see cref="MeleeWeapon"/> and <see cref="RangedWeapon"/>.
     /// Also sets <see cref="AttackManager.projectilePrefab"/> when a ranged weapon is present.
@@ -125,24 +135,29 @@ public class PlayerAttackManager : AttackManager, IHitboxResponder
     public void AssignWeaponAttackData()
     {
         AttackData[] newAttacks = null;
+        var overhead = Attacks[Attacks.Length-1];
 
         // Melee
         if (MeleeWeapon != null)
         {
-            newAttacks = new AttackData[MeleeWeapon.NormalAtkData.Length + 1];
+            newAttacks = new AttackData[MeleeWeapon.NormalAtkData.Length + 2];
             for (int i = 0; i < MeleeWeapon.NormalAtkData.Length; i++)
             {
                 newAttacks[i + 1] = MeleeWeapon.NormalAtkData[i];
             }
+
+            // Universal Overhead
+            if (overhead != null) newAttacks[newAttacks.Length-1] = overhead;
         }
 
         // Ranged
         if (RangedWeapon != null)
         {
-            if (newAttacks == null) newAttacks = new AttackData[1];
+            if (newAttacks == null) newAttacks = new AttackData[7];
             newAttacks[0] = RangedWeapon.ProjectileAttackData;
             projectilePrefab = RangedWeapon.ProjectilePrefab;
         }
+
 
         Attacks = newAttacks;
 

@@ -63,12 +63,17 @@ public class GoblinBomberController : EnemyController
     {
         // ATTACK:
         // launch bombs at player on regular timer @ a fixed angle
+        FacePlayer();
 
         if (CurrentBehaviour == Behaviour.Throwing && CurrentState != State.Action)
         {
             if (currentRoutine != null) StopCoroutine(currentRoutine);
             currentRoutine = ThrowBombRoutine();
             StartCoroutine(currentRoutine);
+        }
+        else
+        {
+            hp.Hurtbox.SetState(Sierra.Combat2D.Hurtbox.State.Vulnerable);
         }
     }
     protected override void DecideAction()
@@ -95,14 +100,16 @@ public class GoblinBomberController : EnemyController
         // Startup
         SetState(State.Action);
         holdingBomb = true;
+        hp.Hurtbox.SetState(Sierra.Combat2D.Hurtbox.State.Critical);
+        GenericEvents.OnAttack.Invoke();
 
         var timer = 0;        
         while (timer < AttackData.Startup) { yield return new WaitForFixedUpdate(); timer++; }
 
         // Active: Throw bomb
-        var bomb = Instantiate(BombPrefab, transform.position + new Vector3(1,1), Quaternion.identity);
+        var bomb = Instantiate(BombPrefab, transform.position + (PlayerToLeft ? -new Vector3(1, 0) : new Vector3(1, 0)), Quaternion.identity);
         bomb.GetComponent<CharacterMotionController>().ContMotionVector.y = BombUpVel;
-        bomb.GetComponent<CharacterMotionController>().XSpeed = BombHorVel;
+        bomb.GetComponent<CharacterMotionController>().XSpeed = PlayerToLeft ? -BombHorVel : BombHorVel;
         bomb.GetComponent<BouncingExplosiveProjectileController>().AttackData = AttackData;
 
         timer = 0;
@@ -110,6 +117,7 @@ public class GoblinBomberController : EnemyController
 
         // Recovery
         holdingBomb = false;
+        hp.Hurtbox.SetState(Sierra.Combat2D.Hurtbox.State.Vulnerable);
 
         timer = 0;
         while (timer < AttackData.Recovery) { yield return new WaitForFixedUpdate(); timer++; }
