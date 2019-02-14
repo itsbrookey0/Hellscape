@@ -516,7 +516,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133608468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281024386}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -2563,7 +2563,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406049883}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -6200,7 +6200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067942847}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -19978,26 +19978,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1397650147446102129}
     m_Modifications:
-    - target: {fileID: 8886214811771042433, guid: 81e19101344ffde4da1946f7cdf54812,
-        type: 3}
-      propertyPath: m_Name
-      value: CraftingRecipeUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 4914650680701295264, guid: 81e19101344ffde4da1946f7cdf54812,
-        type: 3}
-      propertyPath: notEnough
-      value: 
-      objectReference: {fileID: 1397650147410812663}
-    - target: {fileID: 4914650680701295264, guid: 81e19101344ffde4da1946f7cdf54812,
-        type: 3}
-      propertyPath: itemContainer
-      value: 
-      objectReference: {fileID: 1397650147213011024}
-    - target: {fileID: 7064414896284319342, guid: 81e19101344ffde4da1946f7cdf54812,
-        type: 3}
-      propertyPath: tooltip
-      value: 
-      objectReference: {fileID: 3207524184884742172}
     - target: {fileID: 8886214811771042686, guid: 81e19101344ffde4da1946f7cdf54812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20118,6 +20098,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.95764
       objectReference: {fileID: 0}
+    - target: {fileID: 4914650680701295264, guid: 81e19101344ffde4da1946f7cdf54812,
+        type: 3}
+      propertyPath: notEnough
+      value: 
+      objectReference: {fileID: 1397650147410812663}
+    - target: {fileID: 4914650680701295264, guid: 81e19101344ffde4da1946f7cdf54812,
+        type: 3}
+      propertyPath: itemContainer
+      value: 
+      objectReference: {fileID: 1397650147213011024}
+    - target: {fileID: 8886214811771042433, guid: 81e19101344ffde4da1946f7cdf54812,
+        type: 3}
+      propertyPath: m_Name
+      value: CraftingRecipeUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064414896284319342, guid: 81e19101344ffde4da1946f7cdf54812,
+        type: 3}
+      propertyPath: tooltip
+      value: 
+      objectReference: {fileID: 3207524184884742172}
     - target: {fileID: 8886214810637309050, guid: 81e19101344ffde4da1946f7cdf54812,
         type: 3}
       propertyPath: m_LocalScale.x
