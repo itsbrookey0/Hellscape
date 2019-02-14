@@ -133,7 +133,8 @@ public class PlayerAnimationController : AnimationController
                     }
                     else if (newAttackState == PlayerAttackManager.AttackState.Aerial)
                     {
-                        Debug.LogWarning("No animation implimented");                        
+                        sk_an.AnimationState.SetAnimation(0, "AirAttack", false);
+                        sk_an.AnimationState.AddAnimation(0, "Jump", true, 0);
                     }
                     else
                     {

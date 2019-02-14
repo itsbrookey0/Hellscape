@@ -1,15 +1,27 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEditor;
+using System;
+using System.Collections;
 
 public class SlimePriestController : EnemyController, IBossAttackTriggerResponder
 {
     #region Public Vars
+    [Serializable]
+    public class LocalPreistEvents
+    {
+        public UnityEvent OnStageSwitchAlpha;
+        public UnityEvent OnStageSwitchBeta;
+    }
+    public LocalPreistEvents PriestEvents;
+
     public Behaviour CurrentBehaviour;
     public enum Behaviour
     {
         Standing, Aiming
     }
     public BossAttackTrigger AttackTrigger;
+    public int ChangeStageDelayFrames = 90;
     #endregion
     #region Protected Vars
     #endregion
@@ -43,6 +55,10 @@ public class SlimePriestController : EnemyController, IBossAttackTriggerResponde
         am.Attack();
         GenericEvents.OnAttack.Invoke();
     }
+    public void ChangeStage()
+    {
+        StartCoroutine(ChangeStageRoutine());
+    }
     public void SetBehaviour(Behaviour newBehaviour)
     {
         if (CurrentBehaviour != newBehaviour) CurrentBehaviour = newBehaviour;
@@ -69,6 +85,27 @@ public class SlimePriestController : EnemyController, IBossAttackTriggerResponde
     {
         Handles.color = colour;
         Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+    }
+    
+    protected IEnumerator ChangeStageRoutine()
+    {
+        var timer = 0;
+        while (timer < ChangeStageDelayFrames)
+        {
+            timer++;
+            yield return new WaitForFixedUpdate();
+        }
+
+        PriestEvents.OnStageSwitchAlpha.Invoke();
+
+        timer = 0;
+        while (timer < 20)
+        {
+            timer++;
+            yield return new WaitForFixedUpdate();
+        }
+
+        PriestEvents.OnStageSwitchBeta.Invoke();
     }
     #endregion
 }

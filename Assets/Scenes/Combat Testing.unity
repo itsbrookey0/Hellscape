@@ -2722,12 +2722,12 @@ PrefabInstance:
     - target: {fileID: 560885243796859400, guid: 4051438f8c2a5ff4eaffcee894ba13b6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.42000094
+      value: -0.42000046
       objectReference: {fileID: 0}
     - target: {fileID: 560885243796859400, guid: 4051438f8c2a5ff4eaffcee894ba13b6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9199982
+      value: -0.200001
       objectReference: {fileID: 0}
     - target: {fileID: 560885243796859400, guid: 4051438f8c2a5ff4eaffcee894ba13b6,
         type: 3}
@@ -2777,7 +2777,7 @@ PrefabInstance:
     - target: {fileID: 560885243796859401, guid: 4051438f8c2a5ff4eaffcee894ba13b6,
         type: 3}
       propertyPath: orthographic size
-      value: 12.3
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4051438f8c2a5ff4eaffcee894ba13b6, type: 3}
@@ -5014,12 +5014,12 @@ PrefabInstance:
     - target: {fileID: 4284800424329480677, guid: 13f146c7d9f057c4d96e8ca19fd093fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.42000094
+      value: -0.42000046
       objectReference: {fileID: 0}
     - target: {fileID: 4284800424329480677, guid: 13f146c7d9f057c4d96e8ca19fd093fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9199982
+      value: -0.200001
       objectReference: {fileID: 0}
     - target: {fileID: 4284800424329480677, guid: 13f146c7d9f057c4d96e8ca19fd093fa,
         type: 3}
@@ -5074,7 +5074,7 @@ PrefabInstance:
     - target: {fileID: 4284800424329480674, guid: 13f146c7d9f057c4d96e8ca19fd093fa,
         type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 12.3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4284800424329480674, guid: 13f146c7d9f057c4d96e8ca19fd093fa,
         type: 3}
@@ -5125,23 +5125,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 192936917267964973, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: Attacks.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 192936917267964973, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: Attacks.Array.data[5]
-      value: 
-      objectReference: {fileID: 11400000, guid: baf0ba0bdc5216f4892315ede68880cf,
-        type: 2}
-    - target: {fileID: 192936917267964973, guid: 299c53565037cd24dacc737c83af3fc5,
-        type: 3}
-      propertyPath: MeleeWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 535bf0fdb8219a64eb135ee01d0cf8c1,
-        type: 2}
     - target: {fileID: 9114288007197113287, guid: 299c53565037cd24dacc737c83af3fc5,
         type: 3}
       propertyPath: prompt
