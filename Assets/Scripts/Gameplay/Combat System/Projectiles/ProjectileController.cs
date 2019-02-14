@@ -61,8 +61,14 @@ public class ProjectileController : MonoBehaviour, IHitboxResponder
         var hb = hurtbox.GetComponent<Hurtbox>();
         if (hb != null)
         {
-            // if hit a non-player hurtbox
-            if (hb is ButtonHurtbox || hb is BreakableWall)
+            // if hit a button
+            if (hb is ButtonHurtbox)
+            {
+                Events.OnEnvironmentImpact.Invoke();
+                hb.CheckHit();
+            }
+            // if hit a non-character hurtbox
+            else if (hb is BreakableWall)
             {
                 Events.OnEnvironmentImpact.Invoke();
             }
