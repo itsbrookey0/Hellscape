@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad01d769757bae419be10c18adbc317, type: 3}
+  m_Name: Eyeball
+  m_EditorClassIdentifier: 
+  id: cffe84e01b01e0840898170edde7f144
+  Name: Eyeball
+  Desc: Ew, it's squishy. Good for crafting.
+  MaximumStacks: 10
+  Icon: {fileID: 21300000, guid: b9185c39f6dc7e4478d9d332ada58262, type: 3}
+  equipmentType: 3
