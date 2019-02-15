@@ -112,11 +112,11 @@ public class BouncingExplosiveProjectileController : MonoBehaviour, IHitboxRespo
             Hurtbox hurtbox = overlap.GetComponent<Hurtbox>();
             if (overlap.transform.position.x <= transform.position.x)
             {
-                if (hurtbox != null && hurtbox.CurrentState != Hurtbox.State.Blocking) left.Add(hurtbox);
+                if (hurtbox != null && hurtbox.CurrentState != Hurtbox.State.Blocking && !hurtbox.GetComponent<ShieldBlobController>()) left.Add(hurtbox);
             }
             else
             {
-                if (hurtbox != null && hurtbox.CurrentState != Hurtbox.State.Blocking) right.Add(hurtbox);
+                if (hurtbox != null && hurtbox.CurrentState != Hurtbox.State.Blocking && !hurtbox.GetComponent<ShieldBlobController>()) right.Add(hurtbox);
             }
         }
 

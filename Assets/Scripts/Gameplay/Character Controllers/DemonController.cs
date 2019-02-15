@@ -90,6 +90,22 @@ public class DemonController : EnemyController
         if (newBehaviour != CurrentBehaviour)
             CurrentBehaviour = newBehaviour;
     }
+    public void SetColliderToLyingDown()
+    {
+        var col = hp.Hurtbox.Collider as CapsuleCollider2D;
+
+        col.direction = CapsuleDirection2D.Horizontal;
+        col.size = new Vector2(7, 2);
+        col.offset = new Vector2(-1, 0);
+    }
+    public void SetColliderToStanding()
+    {
+        var col = hp.Hurtbox.Collider as CapsuleCollider2D;
+
+        col.direction = CapsuleDirection2D.Vertical;
+        col.size = new Vector2(2, 6);
+        col.offset = new Vector2(0, 0);
+    }
     #endregion
     #region Protected Methods
     protected override void Act()

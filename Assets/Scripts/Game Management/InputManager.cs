@@ -80,7 +80,8 @@ public class InputManager : MonoBehaviour
     public static bool Roll()
     {
         return Input.GetKeyDown(Instance.ControllerRollButton)
-            || Input.GetKeyDown(Instance.KeyboardRollButton);
+            || Input.GetKeyDown(Instance.KeyboardRollButton)
+            || Input.GetKeyDown(Instance.KeyboardSpecialAttackButton);
     }
     public static bool Interact()
     {

@@ -28,6 +28,7 @@ public class EnemyAnimationController : AnimationController
     {
         if (sk_an == null) return;
 
+        Debug.Log("Called");
         sk_an.AnimationState.SetAnimation(0, "Death", false);
     }
     public virtual void EffectOnHit()
