@@ -17,7 +17,7 @@ public class BouncingExplosiveProjectileController : MonoBehaviour, IHitboxRespo
     [Serializable]
     public class ProjectileEvents
     {
-        public UnityEvent OnHit;
+        public UnityEvent OnExplosion;
         public UnityEvent OnEnvironmentImpact;
     }
     #endregion
@@ -95,9 +95,7 @@ public class BouncingExplosiveProjectileController : MonoBehaviour, IHitboxRespo
         var hb = hurtbox.GetComponent<Hurtbox>();
         if (hb is ButtonHurtbox) return;
 
-        Events.OnHit.Invoke();
         Explode();
-
     }
     public void Explode()
     {
@@ -139,6 +137,8 @@ public class BouncingExplosiveProjectileController : MonoBehaviour, IHitboxRespo
                 hurtbox.hp.DealDamageNormal(AttackData);
             }
         }
+
+        Events.OnExplosion.Invoke();
         Destroy(gameObject);
     }
     #endregion
