@@ -12,6 +12,8 @@ public class GlobalControl : MonoBehaviour
     public int currentGold;
     public int forgesReached;
 
+    public bool BossRoom;
+
     public AudioMixer audioMixer;
 
     void Awake()

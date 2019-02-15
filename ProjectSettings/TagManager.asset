@@ -16,6 +16,7 @@ TagManager:
   - Door
   - ForgeDoor
   - StageInstances
+  - BossMusic
   layers:
   - Default
   - TransparentFX
