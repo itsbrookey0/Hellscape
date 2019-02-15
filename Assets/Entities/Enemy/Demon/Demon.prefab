@@ -121,6 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 453682f2d1a068f4b9f3b3fccf4d5882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BloodSplatters:
+  - {fileID: 4328623109836399129, guid: a93c14406ec761c48a14d1c854ce89e0, type: 3}
+  - {fileID: 2579793402307113560, guid: cb966e189d3e425439cfb83ec7eec732, type: 3}
+  - {fileID: 8482440274234366816, guid: 0b8d6b182f5c0094cb5dfcebc3e2715d, type: 3}
 --- !u!1 &5176832189858370831
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +317,7 @@ MonoBehaviour:
   ChaseRangeMin: 10
   ThrowRange: 15
   MeleeRange: 8
+  MinDistToGround: 10
   GizmoColours:
     ThrowRange: {r: 0, g: 1, b: 0, a: 1}
     ChaseRange: {r: 0, g: 1, b: 1, a: 1}
@@ -413,6 +418,17 @@ MonoBehaviour:
             m_StringArgument: test
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 5176832189655893760}
+          m_MethodName: DoBloodFx
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: test
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     OnDeath:
@@ -427,6 +443,17 @@ MonoBehaviour:
             m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: test
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 5176832189655893760}
+          m_MethodName: DoBloodFx
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 5176832190204321653}
@@ -445,17 +472,6 @@ MonoBehaviour:
     OnCriticalHit:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: Play
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: test
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 5176832189655893760}
           m_MethodName: EffectOnFall
           m_Mode: 1
@@ -463,6 +479,17 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 5176832189655893760}
+          m_MethodName: DoBloodFx
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -479,6 +506,17 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: test
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 5176832189655893760}
+          m_MethodName: DoBloodFx
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: test
             m_BoolArgument: 0

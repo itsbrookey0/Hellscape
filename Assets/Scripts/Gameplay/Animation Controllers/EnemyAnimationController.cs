@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyAnimationController : AnimationController
 {
+    public GameObject[] BloodSplatters;
+
     protected new Renderer renderer;
     protected IEnumerator currentFlashRoutine;
 
@@ -34,9 +36,7 @@ public class EnemyAnimationController : AnimationController
         if (sk_an == null) return;
 
         sk_an.AnimationState.SetAnimation(0, "HitStun", false);
-        //sk_an.AnimationState.AddAnimation(0, "Idle", true, 0);
-
-        //FlashMaterialColour(ColourOnHit);
+        DoBloodFx(0);
     }
     public virtual void EffectOnCrit()
     {
@@ -48,4 +48,13 @@ public class EnemyAnimationController : AnimationController
         sk_an.AnimationState.SetAnimation(0, "Attack", false);
         sk_an.AnimationState.AddAnimation(0, "Idle", true, 0);
     }    
+
+    public virtual void DoBloodFx(int index)
+    {
+        if (index >= BloodSplatters.Length) return;
+
+        var particle = Instantiate(BloodSplatters[index], transform.position, BloodSplatters[index].transform.rotation);
+
+        Destroy(particle, 5f);
+    }
 }
