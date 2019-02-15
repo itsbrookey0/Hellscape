@@ -48,14 +48,14 @@ BoneMace
   index: -1
 BootL
   rotate: false
-  xy: 7922, 551
+  xy: 6881, 573
   size: 99, 69
   orig: 99, 69
   offset: 0, 0
   index: -1
 BootR
   rotate: false
-  xy: 3277, 496
+  xy: 2078, 370
   size: 85, 54
   orig: 85, 54
   offset: 0, 0
@@ -81,51 +81,58 @@ DemonLightSword
   orig: 295, 866
   offset: 0, 0
   index: -1
+EmptyWeapon
+  rotate: false
+  xy: 6261, 826
+  size: 750, 178
+  orig: 750, 178
+  offset: 0, 0
+  index: -1
 GloveL
   rotate: false
-  xy: 3277, 552
+  xy: 2078, 426
   size: 96, 134
   orig: 96, 134
   offset: 0, 0
   index: -1
 HeadS
   rotate: true
-  xy: 6881, 712
+  xy: 7013, 712
   size: 292, 548
   orig: 292, 548
   offset: 0, 0
   index: -1
 KneeL
   rotate: false
-  xy: 8037, 670
+  xy: 8054, 690
   size: 84, 132
   orig: 84, 132
   offset: 0, 0
   index: -1
 KneeR
-  rotate: true
-  xy: 6261, 651
+  rotate: false
+  xy: 3277, 521
   size: 78, 165
   orig: 78, 165
   offset: 0, 0
   index: -1
 ThighL
-  rotate: true
-  xy: 8123, 724
+  rotate: false
+  xy: 8054, 627
   size: 78, 61
   orig: 78, 61
   offset: 0, 0
   index: -1
 ThighR
-  rotate: false
-  xy: 6428, 673
+  rotate: true
+  xy: 3277, 433
   size: 86, 56
   orig: 86, 56
   offset: 0, 0
   index: -1
 Torso
   rotate: true
-  xy: 7922, 804
+  xy: 1808, 360
   size: 200, 268
   orig: 200, 268
   offset: 0, 0
@@ -139,7 +146,7 @@ TorsoS
   index: -1
 a
   rotate: false
-  xy: 7922, 622
+  xy: 6881, 644
   size: 113, 180
   orig: 113, 180
   offset: 0, 0
@@ -174,42 +181,42 @@ bow_basicstring
   index: -1
 demon_mace
   rotate: true
-  xy: 6261, 731
+  xy: 6261, 551
   size: 273, 618
   orig: 273, 618
   offset: 0, 0
   index: -1
 ds
   rotate: false
-  xy: 946, 206
+  xy: 8054, 824
   size: 113, 180
   orig: 113, 180
   offset: 0, 0
   index: -1
 file
   rotate: true
-  xy: 7431, 537
+  xy: 7563, 537
   size: 467, 489
   orig: 467, 489
   offset: 0, 0
   index: -1
 fn
   rotate: false
-  xy: 1808, 420
+  xy: 946, 246
   size: 103, 140
   orig: 103, 140
   offset: 0, 0
   index: -1
 g
   rotate: false
-  xy: 1913, 443
+  xy: 946, 8
   size: 91, 117
   orig: 91, 117
   offset: 0, 0
   index: -1
 gb
   rotate: false
-  xy: 946, 87
+  xy: 946, 127
   size: 91, 117
   orig: 91, 117
   offset: 0, 0
