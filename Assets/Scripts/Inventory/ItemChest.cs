@@ -14,6 +14,8 @@ public class ItemChest : MonoBehaviour
     public Sprite closed;
     public Sprite open;
 
+    public GameObject e;
+
     private bool isInRange;
     private bool isEmpty;
 
@@ -44,6 +46,7 @@ public class ItemChest : MonoBehaviour
                 if (amount == 0)
                 {
                     isEmpty = true;
+                    e.gameObject.SetActive(false);
                     spriteRenderer.enabled = false;
                     chestRenderer.sprite = open;
                     FindObjectOfType<AudioManager>().Play("ChestOpen");
@@ -62,8 +65,10 @@ public class ItemChest : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isInRange = true;
+
             if (!isEmpty)
             {
+                e.gameObject.SetActive(true);
                 spriteRenderer.enabled = true;
             }
         }
@@ -74,6 +79,7 @@ public class ItemChest : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isInRange = false;
+
             spriteRenderer.enabled = false;
         }
     }

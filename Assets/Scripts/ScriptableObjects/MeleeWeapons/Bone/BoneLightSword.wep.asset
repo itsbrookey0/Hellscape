@@ -19,7 +19,7 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 6e58043f0db02de4990de5ab54b8ad42, type: 3}
   iconInventory: {fileID: 21300000, guid: a0efbcf2d6b207f4abe64de0ad478469, type: 3}
   equipmentType: 1
-  WeaponSkinName: default
+  WeaponSkinName: Bone_LightSword
   NormalAttackChainLength: 0
   NormalAtkData:
   - {fileID: 11400000, guid: c1ec91413d07e7346b95b00dfe4e273c, type: 2}
