@@ -52,8 +52,8 @@ public class EnemyAnimationController : AnimationController
     public virtual void DoBloodFx(int index)
     {
         if (index >= BloodSplatters.Length) return;
-
-        var particle = Instantiate(BloodSplatters[index], transform.position, BloodSplatters[index].transform.rotation);
+        
+        var particle = Instantiate(BloodSplatters[index], transform);
 
         Destroy(particle, 5f);
     }
