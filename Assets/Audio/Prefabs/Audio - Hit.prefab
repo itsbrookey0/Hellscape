@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Effects:
-  - {fileID: 8300000, guid: b13a292d64b2a364dbdbf780da295644, type: 3}
+  - {fileID: 8300000, guid: 218a6b4b3b9be12479b185688b50c46a, type: 3}
   - {fileID: 8300000, guid: 9e0fd9dbb5a1fe143bef8bef82bd7340, type: 3}
   - {fileID: 8300000, guid: 09e1067b1ee96b0448497e0faf83c91f, type: 3}
   - {fileID: 8300000, guid: 4f27faf421d721e499ee1a3dd22f8912, type: 3}

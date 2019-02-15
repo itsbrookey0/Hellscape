@@ -83,7 +83,7 @@ public class InstanceContainer
 
         for (int i = 0; i < Count; i++)
         {
-            var newInstance = UnityEngine.Object.Instantiate(Prefab, SpawnLocations[i], Quaternion.identity, Parent);
+            var newInstance = UnityEngine.Object.Instantiate(Prefab, Parent.position + (Vector3)SpawnLocations[i], Quaternion.identity, Parent);
             SpawnedObjects.Add(newInstance);
         }
     }

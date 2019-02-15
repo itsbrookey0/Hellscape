@@ -15,11 +15,13 @@ public class Door : MonoBehaviour
     public void Open()
     {
         col.enabled = false;
+        gameObject.SetActive(false);
         if (sr != null) sr.enabled = false;
     }
     public void Close()
     {
         col.enabled = true;
+        gameObject.SetActive(true);
         if (sr != null) sr.enabled = true;
     }
 }
