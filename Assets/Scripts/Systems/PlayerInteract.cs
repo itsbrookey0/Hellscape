@@ -96,7 +96,7 @@ public class PlayerInteract : MonoBehaviour
             }
         }
 
-        else if (!hasKey && InputManager.Interact())
+        else if (!hasKey && InputManager.Interact() && atDoor)
         {
             FindObjectOfType<AudioManager>().Play("DoorLocked");
             //Show a message saying the door is locked.
@@ -106,6 +106,15 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //BOSS MUSIC
+        if(other.tag == "BossMusic")
+        {
+            //GlobalControl.Instance.BossRoom = true;
+
+            FindObjectOfType<AudioManager>().Stop("BackgroundMusic");
+            FindObjectOfType<AudioManager>().Play("BossMusic");
+        }
+
         //CHECKPOINTS
         if(other.tag == "Checkpoint")
         {
