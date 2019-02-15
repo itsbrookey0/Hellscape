@@ -57,6 +57,7 @@ public class PlayerInteract : MonoBehaviour
     {
         if (health.Dead)
         {
+            FindObjectOfType<AudioManager>().Play("PlayerDead");
             transform.position = respawnPoint;
             GetComponent<PlayerController>().Respawn();
             health.Hp = 6;

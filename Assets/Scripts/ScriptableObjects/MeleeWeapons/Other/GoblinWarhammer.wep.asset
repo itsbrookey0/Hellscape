@@ -17,8 +17,9 @@ MonoBehaviour:
   Desc: A new item.
   MaximumStacks: 1
   Icon: {fileID: 21300000, guid: c5678ae6be062384594e5009a2b1c79c, type: 3}
+  iconInventory: {fileID: 0}
   equipmentType: 1
+  WeaponSkinName: Goblin_Warhammer
   NormalAttackChainLength: 0
   NormalAtkData: []
-  SpecialAtkData: {fileID: 0}
   Type: 3

@@ -17,8 +17,9 @@ MonoBehaviour:
   Desc: A new item.
   MaximumStacks: 1
   Icon: {fileID: 21300000, guid: c599ab568512f4f40be6d4b8c99fc05c, type: 3}
+  iconInventory: {fileID: 0}
   equipmentType: 1
+  WeaponSkinName: Goblin_Mace
   NormalAttackChainLength: 0
   NormalAtkData: []
-  SpecialAtkData: {fileID: 0}
   Type: 2

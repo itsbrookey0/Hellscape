@@ -19,7 +19,7 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 1ae637c3c622f42439c12119f5e2c14d, type: 3}
   iconInventory: {fileID: 21300000, guid: e40e584393142924d80746be3d318660, type: 3}
   equipmentType: 1
-  WeaponSkinName: default
+  WeaponSkinName: Bone_Mace
   NormalAttackChainLength: 0
   NormalAtkData:
   - {fileID: 11400000, guid: 043db32ffc35e484aab9211fc5f14c21, type: 2}
