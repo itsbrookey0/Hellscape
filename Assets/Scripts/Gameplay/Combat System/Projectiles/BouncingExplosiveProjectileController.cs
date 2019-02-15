@@ -22,6 +22,7 @@ public class BouncingExplosiveProjectileController : MonoBehaviour, IHitboxRespo
     }
     #endregion
     #region Public Vars
+    public GameObject particles;
     public float BlastRadius = 2f;
     public float Fuse = 3f;
     [Range(0,1)]
@@ -138,6 +139,7 @@ public class BouncingExplosiveProjectileController : MonoBehaviour, IHitboxRespo
             }
         }
 
+        Instantiate(particles, transform.position, particles.transform.rotation);
         Events.OnExplosion.Invoke();
         Destroy(gameObject);
     }
