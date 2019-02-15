@@ -89,6 +89,8 @@ public class SlimePriestController : EnemyController, IBossAttackTriggerResponde
     
     protected IEnumerator ChangeStageRoutine()
     {
+        if (hp.Hp == 0) yield break;
+
         var timer = 0;
         while (timer < ChangeStageDelayFrames)
         {

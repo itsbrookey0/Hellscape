@@ -1833,6 +1833,41 @@ PrefabInstance:
       propertyPath: MinDistToGround
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321652, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: OnLanding.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321652, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: OnLanding.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321652, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: OnLanding.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321652, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: OnLanding.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1488915203}
+    - target: {fileID: 5176832190204321652, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: OnLanding.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetColliderToLyingDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321652, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: OnLanding.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321651, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: Events.OnRecovery.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5176832190204321651, guid: d16c051244849f34695d84a906f13953,
         type: 3}
       propertyPath: Events.OnCriticalHit.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -1843,6 +1878,36 @@ PrefabInstance:
       propertyPath: Events.OnCriticalHit.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321651, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: Events.OnRecovery.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321651, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: Events.OnRecovery.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321651, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: Events.OnRecovery.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1488915203}
+    - target: {fileID: 5176832190204321651, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: Events.OnRecovery.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetColliderToStanding
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176832190204321651, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: Events.OnRecovery.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176832189655893772, guid: d16c051244849f34695d84a906f13953,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5176832189655893761, guid: d16c051244849f34695d84a906f13953,
         type: 3}
       propertyPath: m_Mesh
@@ -1850,6 +1915,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d16c051244849f34695d84a906f13953, type: 3}
+--- !u!114 &1488915203 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5176832190204321653, guid: d16c051244849f34695d84a906f13953,
+    type: 3}
+  m_PrefabInstance: {fileID: 1488915196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a61135d1bff03146a8d27dd6ae816a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1505902370
 GameObject:
   m_ObjectHideFlags: 0
