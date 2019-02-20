@@ -17,4 +17,5 @@ MonoBehaviour:
   Desc: Stripped off a goblin. You monster. Good for crafting.
   MaximumStacks: 10
   Icon: {fileID: 21300000, guid: e245514657758d949880fd2584a1c3ea, type: 3}
+  iconInventory: {fileID: 0}
   equipmentType: 3

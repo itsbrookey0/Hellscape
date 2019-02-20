@@ -7,5 +7,5 @@
     //bool ContainsItem(GenericItem item);
     bool RemoveItem(GenericItem item);
     bool AddItem(GenericItem item);
-    bool IsFull();
+    bool CanAddItem(GenericItem item, int amount = 1);
 }

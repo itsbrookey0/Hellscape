@@ -30,8 +30,8 @@ public class GenericItem : ScriptableObject
 
     private void OnValidate()
     {
-        string path = AssetDatabase.GetAssetPath(this);
-        id = AssetDatabase.AssetPathToGUID(path);
+            string path = AssetDatabase.GetAssetPath(this);
+            id = AssetDatabase.AssetPathToGUID(path);
     }
 
     public virtual GenericItem GetCopy()

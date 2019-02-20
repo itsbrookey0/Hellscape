@@ -17,4 +17,5 @@ MonoBehaviour:
   Desc: A hunk of flesh from a demon. Good for weaponry.
   MaximumStacks: 10
   Icon: {fileID: 21300000, guid: 04ebe615f633f714fb758e06719c548b, type: 3}
+  iconInventory: {fileID: 0}
   equipmentType: 3

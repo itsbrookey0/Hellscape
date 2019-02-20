@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using UnityEditor;
 using System;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SlimePriestController : EnemyController, IBossAttackTriggerResponder
 {
@@ -72,6 +73,14 @@ public class SlimePriestController : EnemyController, IBossAttackTriggerResponde
         // Despawn
         if (transform.parent != null) Destroy(transform.parent.gameObject, 3f);
         else Destroy(gameObject, 3f);
+
+        StartCoroutine(endGame());
+    }
+
+    public IEnumerator endGame()
+    {
+        yield return new WaitForSeconds(6f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     #endregion
     #region Protected Methods
