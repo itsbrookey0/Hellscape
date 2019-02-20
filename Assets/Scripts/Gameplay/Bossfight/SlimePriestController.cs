@@ -3,7 +3,6 @@ using UnityEngine.Events;
 using UnityEditor;
 using System;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class SlimePriestController : EnemyController, IBossAttackTriggerResponder
 {
@@ -32,7 +31,7 @@ public class SlimePriestController : EnemyController, IBossAttackTriggerResponde
     {
         base.Awake();        
     }
-    protected void Start()
+    protected void Start() 
     {
         FindObjectOfType<FightManager>().GoToNextStage();
         AttackTrigger?.SetResponder(this);
@@ -71,7 +70,8 @@ public class SlimePriestController : EnemyController, IBossAttackTriggerResponde
         am?.StopAttack();
 
         // Despawn
-        StartCoroutine(ChangeScene());
+        if (transform.parent != null) Destroy(transform.parent.gameObject, 3f);
+        else Destroy(gameObject, 3f);
     }
     #endregion
     #region Protected Methods
@@ -85,14 +85,6 @@ public class SlimePriestController : EnemyController, IBossAttackTriggerResponde
     {
         Handles.color = colour;
         Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
-    }
-
-    protected IEnumerator ChangeScene()
-    {
-
-        yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("EndScene");
-
     }
     
     protected IEnumerator ChangeStageRoutine()
