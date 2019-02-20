@@ -71,7 +71,7 @@ public class InventoryManager : MonoBehaviour
 
     public void Unequip(GenericItem item)
     {
-        if(!inventory.IsFull() && equipmentPanel.RemoveItem(item))
+        if(inventory.CanAddItem(item) && equipmentPanel.RemoveItem(item))
         {
             inventory.AddItem(item);
             FindObjectOfType<AudioManager>().Play("Unequip"); //UNEQUIPPING ITEMS SOUND

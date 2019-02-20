@@ -29,7 +29,7 @@ public class PlayerInteract : MonoBehaviour
     private bool forgeUnfreeze;
 
     [Header("Item Pickup")]
-    public float itemSpeed = 10f;
+     float itemSpeed = 10f;
     public Transform target;
     public bool pickedUp;
 
@@ -199,10 +199,14 @@ public class PlayerInteract : MonoBehaviour
         {
             float step = itemSpeed * Time.deltaTime;
             other.transform.position = Vector3.MoveTowards(other.transform.position, target.position, step);
-            pickedUp = true;
+
 
             if (other.transform.position == target.position)
+            {
                 other.gameObject.SendMessage("PickUp");
+                pickedUp = true;
+            }
+                
         }
     }
 
@@ -227,6 +231,19 @@ public class PlayerInteract : MonoBehaviour
         if(other.tag == "Door")
         {
             hasTeleported = false;
+        }
+
+        if (other.tag == "Interactable")
+        {
+            if (!pickedUp)
+            {
+                itemSpeed = 30f;
+                float step = itemSpeed * Time.deltaTime;
+                other.transform.position = Vector3.MoveTowards(other.transform.position, target.position, step);
+
+                if (other.transform.position == target.position)
+                    other.gameObject.SendMessage("PickUp");
+            }
         }
     }
 

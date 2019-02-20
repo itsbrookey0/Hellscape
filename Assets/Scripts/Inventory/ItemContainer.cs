@@ -4,8 +4,26 @@ using UnityEngine;
 
 public abstract class ItemContainer : MonoBehaviour, IItemContainer
 {
+
     [SerializeField] protected ItemSlot[] itemSlots;
     public List<GenericItem> genericItems = new List<GenericItem>();
+
+    public virtual bool CanAddItem(GenericItem item, int amount = 1)
+    {
+        int freeSpaces = 0;
+
+        foreach (ItemSlot itemSlot in itemSlots)
+        {
+            if(itemSlot.Item == null || itemSlot.Item.ID == item.ID)
+            {
+                freeSpaces += item.MaximumStacks - itemSlot.Amount;
+            }
+        }
+
+        return freeSpaces >= amount;
+    }
+
+
 
     public virtual bool AddItem(GenericItem item)
     {
@@ -44,20 +62,6 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 
         return false;
 
-    }
-
-    public virtual bool IsFull()
-    {
-        //return items.Count >= itemSlots.Length;
-        for (int i = 0; i < itemSlots.Length; i++)
-        {
-            if (itemSlots[i].Item == null)
-            {
-                return false;
-            }
-        }
-
-        return true;
     }
 
     public virtual GenericItem RemoveItem(string itemID)

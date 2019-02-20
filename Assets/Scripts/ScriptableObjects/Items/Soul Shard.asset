@@ -17,4 +17,5 @@ MonoBehaviour:
   Desc: You defeated a boss! Good for you.
   MaximumStacks: 1
   Icon: {fileID: 21300000, guid: 96e93798aaac7c94aabf34286c952298, type: 3}
+  iconInventory: {fileID: 0}
   equipmentType: 3

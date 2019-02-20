@@ -27,25 +27,11 @@ public class CraftingRecipeUI : MonoBehaviour
 
     public void OnCraftButtonClick()
     {
-        if(craftingRecipe != null && itemContainer != null)
+        craftingRecipe.Craft(itemContainer);
+
+        if (craftingRecipe.HasMaterials(itemContainer) == false)
         {
-            if(craftingRecipe.CanCraft(itemContainer))
-            {
-                if (!itemContainer.IsFull())
-                {
-                    craftingRecipe.Craft(itemContainer);
-                }
-                else
-                {
-                    Debug.Log("inventory is full.");
-                    
-                }
-            }
-            else
-            {
-                FindObjectOfType<AudioManager>().Play("CantCraft"); //CANT CRAFT SOUND
-                StartCoroutine(NotEnoughMaterials());
-            }
+            StartCoroutine(NotEnoughMaterials());
         }
     }
 
