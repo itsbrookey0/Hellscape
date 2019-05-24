@@ -23,7 +23,6 @@ public class FightManager : MonoBehaviour
     /// <summary>
     /// This script's core methods will not work if the bool is active
     /// </summary>
-    [ReadOnly]
     public bool Completed = false;
 
     public int StageCount { get { return Stages.Length; } }

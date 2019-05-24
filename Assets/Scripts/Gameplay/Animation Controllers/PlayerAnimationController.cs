@@ -157,6 +157,9 @@ public class PlayerAnimationController : AnimationController
                                 SwitchOnWarhammer(newAttackState);
                                 break;
 
+                            case MeleeWeaponItem.WeaponType.GreatSword:
+                                goto case MeleeWeaponItem.WeaponType.Warhammer;
+
                             default:
                                 throw new NotImplementedException("This attack animation type is not yet configured!");
                         }
@@ -283,7 +286,8 @@ public class PlayerAnimationController : AnimationController
                 
 
             default:
-                throw new NotImplementedException("This attack animation sub-state is not yet configured!"); ;
+                Debug.LogWarning("This attack animation sub-state is not yet configured!");
+                break;
         }
     }
     private void SetAnimationState(AnimState newAnimationState)

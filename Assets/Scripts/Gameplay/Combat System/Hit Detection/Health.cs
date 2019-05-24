@@ -143,7 +143,6 @@ public class Health : MonoBehaviour
     }
     public void UpdateHearts()
     {
-
         if (isPlayer)
         {
             bool empty = false;
@@ -168,7 +167,8 @@ public class Health : MonoBehaviour
                         int currentHeartHealth = (int)(HealthPerHeart - (HealthPerHeart * i - Hp));
                         int healthPerImage = HealthPerHeart / (HealthSprites.Length - 1);
                         int imageIndex = currentHeartHealth / healthPerImage;
-                        image.sprite = HealthSprites[imageIndex];
+                        if (HealthSprites[imageIndex] != null) image.sprite = HealthSprites[imageIndex];
+                        else Debug.LogWarning("Cannot find health sprite!", this);
                         empty = true;
                     }
                 }

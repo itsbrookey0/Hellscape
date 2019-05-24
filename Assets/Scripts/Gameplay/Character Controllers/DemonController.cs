@@ -241,8 +241,10 @@ public class DemonController : EnemyController
     }
     protected void DrawCircle(float radius, Color colour)
     {
+        /*
         Handles.color = colour;
         Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
+        */
     }
     protected void StartThrow()
     {

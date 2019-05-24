@@ -4,7 +4,6 @@ using System.Collections;
 public class BossHealth : Health
 {
     public int IFrames = 30;
-    [ReadOnly]
     public bool Invulnerable;
 
     private IEnumerator currentRoutine;

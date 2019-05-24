@@ -28,10 +28,11 @@ public class GenericItem : ScriptableObject
 
     public EquipmentType equipmentType;
 
-    private void OnValidate()
+    
+    private void OnEnable()
     {
-            string path = AssetDatabase.GetAssetPath(this);
-            id = AssetDatabase.AssetPathToGUID(path);
+        string path = AssetDatabase.GetAssetPath(this);
+        id = AssetDatabase.AssetPathToGUID(path);
     }
 
     public virtual GenericItem GetCopy()

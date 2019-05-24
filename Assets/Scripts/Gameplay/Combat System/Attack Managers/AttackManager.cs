@@ -124,13 +124,17 @@ public abstract class AttackManager : MonoBehaviour, IHitboxResponder
     {
         // Initialize
         var hp = hurtbox.GetComponent<Hurtbox>().hp;
-        Attacks[currentAttackIndex].Sign = Math.Sign(transform.localScale.x);
 
-        // melee cannot trigger superstun, so we will never need to call DealDamageCritical
-        if (hurtState == Hurtbox.State.Armored) hp.DealDamageArmored(Attacks[currentAttackIndex]);
-        else hp.DealDamageNormal(Attacks[currentAttackIndex]);
+        if (hp != null)
+        {
+            Attacks[currentAttackIndex].Sign = Math.Sign(transform.localScale.x);
 
-        //hurtbox.GetComponent<Hurtbox>().Health.LogHp();
+            // melee cannot trigger superstun, so we will never need to call DealDamageCritical
+            if (hurtState == Hurtbox.State.Armored) hp.DealDamageArmored(Attacks[currentAttackIndex]);
+            else hp.DealDamageNormal(Attacks[currentAttackIndex]);
+
+            //hurtbox.GetComponent<Hurtbox>().Health.LogHp();
+        }
 
         Hitbox.SetInactive();
     }

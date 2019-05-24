@@ -29,8 +29,10 @@ namespace Sierra
 
         public static void DrawCircle(Vector2 pos, float radius, Color colour)
         {
+            /*
             Handles.color = colour;
             Handles.DrawWireDisc(pos, Vector3.forward, radius);
+            */
         }
     }
 }

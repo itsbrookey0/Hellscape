@@ -76,7 +76,7 @@ public class CharacterMotionController : MotionController
     protected const float zeroThreshold = 0.05f;
     protected const int deltaMultiplicationFactor = 50;
 
-    [ReadOnly][SerializeField]
+    [SerializeField]
     protected bool gravityEnabled = true;
     protected bool impulseLastFrame = false;
     protected bool inAirLastFrame = false;

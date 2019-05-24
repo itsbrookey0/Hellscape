@@ -5,7 +5,7 @@ using UnityEngine;
  * Thanks to It3ration for the solution!
  * https://answers.unity.com/questions/489942/how-to-make-a-readonly-property-in-inspector.html
  * ============================================================================================= */
-
+ /*
 public class ReadOnlyAttribute : PropertyAttribute
 {
 
@@ -28,4 +28,4 @@ public class ReadOnlyDrawer : PropertyDrawer
         EditorGUI.PropertyField(position, property, label, true);
         GUI.enabled = true;
     }
-}
+}*/

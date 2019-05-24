@@ -36,9 +36,12 @@ public class GoblinBomberController : EnemyController
     {
         base.Awake();
     }
-    protected void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
-        DrawCircle(Range, Color.cyan);
+        /*
+        Handles.color = Color.cyan;
+        Handles.DrawWireDisc(transform.position, Vector3.forward, Range);
+        */
     }
     #endregion
 
@@ -110,8 +113,6 @@ public class GoblinBomberController : EnemyController
     }
     protected void DrawCircle(float radius, Color colour)
     {
-        Handles.color = colour;
-        Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
     }
     private IEnumerator ThrowBombRoutine()
     {

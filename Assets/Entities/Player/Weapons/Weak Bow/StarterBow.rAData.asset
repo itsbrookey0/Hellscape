@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: StarterBow.rAData
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileAttackData
-  Startup: 21
-  Active: 1
-  Recovery: 22
+  Startup: 12
+  Active: 4
+  Recovery: 20
   MotionOnAttack: 5
   Damage: 1
+  Strength: 0
   KnockBack: 8
   KnockUp: 3
   HitStun: 32

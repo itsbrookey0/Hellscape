@@ -25,7 +25,15 @@ public class ItemChest : MonoBehaviour
     {
         if(inventory == null)
         {
-            inventory = GameObject.Find("InventoryCanvas").transform.Find("Inventory/CharacterPanel/InventoryPanel").GetComponent<Inventory>();
+            try
+            {
+                inventory = GameObject.Find("InventoryCanvas").transform.Find("Inventory/CharacterPanel/InventoryPanel").GetComponent<Inventory>();
+            }
+            catch(System.NullReferenceException)
+            {
+                Debug.LogWarning("Dude your chest thing is broken. idk why.");
+            }
+            
         }
 
         spriteRenderer.sprite = item.Icon;

@@ -9,7 +9,6 @@ public class PlayerAttackManager : AttackManager, IHitboxResponder
     public MeleeWeaponItem MeleeWeapon;
     public RangedWeaponItem RangedWeapon;
     public int ArrowCapacity = 3;
-    [ReadOnly]
     public int Arrows = 3;
 
     public AttackData SpecialAttackData { get { return Attacks[0]; } }
